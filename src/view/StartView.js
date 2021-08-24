@@ -1,7 +1,13 @@
 import React from 'react';
 import { AiOutlineStar as StarIcon } from "react-icons/ai";
+import { GrGroup as UsersIcon } from "react-icons/gr";
+import { MdDateRange as DateIcon } from "react-icons/md";
+import { MovieDescription } from '../components/atom/MovieDescription';
+import { MovieFavouriteButton } from '../components/atom/MovieFavouriteButton';
+import { MoviePopularity } from '../components/atom/MoviePopularity';
 import { MoviePoster } from '../components/atom/MoviePoster';
 import { MovieSectionTitle } from '../components/atom/MovieSectionTitle';
+import { MovieTitle } from '../components/atom/MovieTitle';
 import { RateWrapper } from '../components/atom/RateWrapper';
 import { MovieHeader } from '../components/organism/MovieHeader';
 import { MovieItem } from '../components/organism/MovieItem';
@@ -27,7 +33,7 @@ export const StartView = ({valueSearch}) => {
                                 className='result'
                             />
                             <div>
-                                <h2>Star Wars IV : New Hope</h2>
+                                <MovieTitle className='result'>Star Wars IV : New Hope</MovieTitle>
                                 <RateWrapper>
                                     <StarIcon/>
                                     <StarIcon/>
@@ -35,18 +41,18 @@ export const StartView = ({valueSearch}) => {
                                     <StarIcon/>
                                     <StarIcon/>
                                 </RateWrapper>
+                                <MoviePopularity>
+                                    <UsersIcon />
+                                    <p>1.185.852.963</p>
+                                </MoviePopularity>
                                 <p>
-                                    Watched by 1.185.852.963 peoples
+                                    <DateIcon />
+                                    <p>1979/07/19</p>
                                 </p>
-                                <p>
-                                    Date of release: 2979/07/19
-                                </p>
-                                <p>
-                                    Director: George Lucas
-                                </p>
-                                <p>
-                                    Description: Gwiezdne wojny, część IV: Nowa nadzieja – chronologicznie czwarty film z cyklu Gwiezdne wojny wyreżyserowany przez George’a Lucasa w 1977 roku pod tytułem Gwiezdne wojny, bez numeru epizodu i podtytułu; opowiada o młodym Luke’u Skywalkerze, który – podobnie jak ojciec – chce zostać rycerzem Jedi. 
-                                </p>
+                                <MovieDescription> 
+                                   Gwiezdne wojny, część IV: Nowa nadzieja – chronologicznie czwarty film z cyklu Gwiezdne wojny wyreżyserowany przez George’a Lucasa w 1977 roku pod tytułem Gwiezdne wojny, bez numeru epizodu i podtytułu; opowiada o młodym Luke’u Skywalkerze, który – podobnie jak ojciec – chce zostać rycerzem Jedi. 
+                                </MovieDescription>
+                                <MovieFavouriteButton/>
                             </div>
                         </div>
                     </>
