@@ -32,17 +32,21 @@ export const MovieHeader = () => {
     return (
         <MovieHeaderStyle onMouseOver={movieFunctionOn} onMouseLeave={movieFunctionOff}>
             {
-
-                movie ?
+                movie
                 
-            <MovieTreaser
-                autoPlay={movie}
-                // loop
-                src={treaser}
-            /> :
-            <MoviePoster
-                image="https://bigbaddice.pl/wp-content/uploads/2019/07/spider_man_far_from_home.jpg"
-                className='main' /> 
+                ?
+                
+                <MovieTreaser
+                    autoPlay={movie}
+                    src={treaser}
+                />
+                
+                :
+
+                <MoviePoster
+                    image="https://bigbaddice.pl/wp-content/uploads/2019/07/spider_man_far_from_home.jpg"
+                    className='main'
+                /> 
             }
 
             <MovieInformation

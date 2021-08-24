@@ -21,10 +21,13 @@ const SearchBoxStyle = styled.form`
     }
 `
 
-export const SearchBox = () => {
+export const SearchBox = ({valueSearch, updateSearchValue} ) => {
     return (
         <SearchBoxStyle onSubmit={e => e.preventDefault()}>
-            <SearchInputWrapper />
+            <SearchInputWrapper
+                valueSearch={valueSearch}
+                updateSearchValue={updateSearchValue}
+            />
             <SearchButton>
                 <SearchIcon/>
             </SearchButton>

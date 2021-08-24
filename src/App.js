@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import { Navigation } from './components/schema/Navigation';
@@ -49,13 +49,24 @@ const GlobalStyle = createGlobalStyle`
 
 `
 export const App = () => {
+
+  const [valueSearch, updateSearch] = useState('');
+
+  const updateSearchValue = e => {
+    // console.log(valueSearch);
+    updateSearch(e.target.value);
+  }
+
   return (
     <>
       <GlobalStyle />
       <Router>
-      <Navigation />
+      <Navigation
+          valueSearch={valueSearch}
+          updateSearchValue={updateSearchValue}
+      />
         <Switch>
-          <Route exact path='/' component={StartView}/>
+          <Route exact path='/' component={ () => <StartView valueSearch={valueSearch} />}/>
         </Switch>
       </Router>
     </>

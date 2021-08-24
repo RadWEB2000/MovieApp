@@ -27,10 +27,13 @@ const NavigationStyle = styled.nav`
 
 `
 
-export const Navigation = () => {
+export const Navigation = ({valueSearch, updateSearchValue}) => {
     return (
         <NavigationStyle>
-            <SearchBox />
+            <SearchBox
+                valueSearch={valueSearch}
+                updateSearchValue={updateSearchValue}
+            />
             <Menu/>
         </NavigationStyle>
     )

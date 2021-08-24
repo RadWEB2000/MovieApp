@@ -15,4 +15,11 @@ export const MoviePoster = styled.div`
         width:100%;
         z-index:-1;
     }
+
+
+    &.result{
+        width:250px;
+        position:relative;
+        height:350px;
+    }
 `

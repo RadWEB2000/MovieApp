@@ -29,11 +29,13 @@ const SearchInputWrapperStyle = styled.div`
     }
 
 `
-export const SearchInputWrapper = () => {
+export const SearchInputWrapper = ({valueSearch, updateSearchValue} ) => {
     return (
         <SearchInputWrapperStyle>
             <SearchInput
                 placeholder='Write here title or actor'
+                value={valueSearch}
+                onChange={updateSearchValue}
             />
             <SearchSpan/>
         </SearchInputWrapperStyle>
