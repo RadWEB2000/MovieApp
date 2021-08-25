@@ -1,23 +1,16 @@
 import React from 'react';
-import { AiOutlineStar as StarIcon } from "react-icons/ai";
-import { GrGroup as UsersIcon } from "react-icons/gr";
-import { MdDateRange as DateIcon } from "react-icons/md";
-import { MovieDescription } from '../components/atom/MovieDescription';
-import { MovieFavouriteButton } from '../components/atom/MovieFavouriteButton';
-import { MoviePopularity } from '../components/atom/MoviePopularity';
-import { MoviePoster } from '../components/atom/MoviePoster';
+import { MovieSearchValue } from '../components/atom/MovieSearchValue';
 import { MovieSectionTitle } from '../components/atom/MovieSectionTitle';
-import { MovieTitle } from '../components/atom/MovieTitle';
-import { RateWrapper } from '../components/atom/RateWrapper';
 import { MovieHeader } from '../components/organism/MovieHeader';
 import { MovieItem } from '../components/organism/MovieItem';
+import { MovieSearch } from '../components/organism/MovieSearch';
 import { MovieItems } from '../components/schema/MovieItems';
 
 
 
 
 
-export const StartView = ({valueSearch}) => {
+export const StartView = ({valueSearch,title, popular, description, release, rate}) => {
     return (
         <>
             {
@@ -26,35 +19,15 @@ export const StartView = ({valueSearch}) => {
                     ?
 
                     <>
-                        <h1>„{valueSearch}”</h1>
-                        <div>
-                            <MoviePoster
-                                image='https://m.media-amazon.com/images/I/A1wnJQFI82L._AC_SY879_.jpg'
-                                className='result'
-                            />
-                            <div>
-                                <MovieTitle className='result'>Star Wars IV : New Hope</MovieTitle>
-                                <RateWrapper>
-                                    <StarIcon/>
-                                    <StarIcon/>
-                                    <StarIcon/>
-                                    <StarIcon/>
-                                    <StarIcon/>
-                                </RateWrapper>
-                                <MoviePopularity>
-                                    <UsersIcon />
-                                    <p>1.185.852.963</p>
-                                </MoviePopularity>
-                                <p>
-                                    <DateIcon />
-                                    <p>1979/07/19</p>
-                                </p>
-                                <MovieDescription> 
-                                   Gwiezdne wojny, część IV: Nowa nadzieja – chronologicznie czwarty film z cyklu Gwiezdne wojny wyreżyserowany przez George’a Lucasa w 1977 roku pod tytułem Gwiezdne wojny, bez numeru epizodu i podtytułu; opowiada o młodym Luke’u Skywalkerze, który – podobnie jak ojciec – chce zostać rycerzem Jedi. 
-                                </MovieDescription>
-                                <MovieFavouriteButton/>
-                            </div>
-                        </div>
+                        <MovieSearchValue>„{valueSearch}”</MovieSearchValue>
+                        <MovieSearch
+                            image='https://m.media-amazon.com/images/I/A1wnJQFI82L._AC_SY879_.jpg'
+                            title={title}
+                            rate={rate.toString}
+                            release={release}
+                            popular={popular}
+                            description={description}
+                        />
                     </>
                 
                     :

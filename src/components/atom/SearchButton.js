@@ -6,7 +6,7 @@ export const SearchButton = styled(motion.button)`
     align-items:center;
     background:none;
     border:none;
-    color:#fff;
+    color:var(--white);
     cursor:pointer;
     display:flex;
     font-size:2.7rem;
@@ -27,7 +27,7 @@ export const SearchButton = styled(motion.button)`
     &:focus,
     &:hover{
 
-        color:#E63946;
+        color:var(--red);
 
         & > * {
 

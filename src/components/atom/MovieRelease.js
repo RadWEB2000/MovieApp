@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const MoviePopularity = styled.div`
-    align-items:center;
-    background:var(--red);
-    color:var(--grey);
+export const MovieRelease = styled.div`
+   align-items:center;
+    background:var(--redDark);
+    color:var(--white);
     display:flex;
     justify-content:flex-start;
     padding-left:1rem;
@@ -11,6 +11,7 @@ export const MoviePopularity = styled.div`
     font-size:2.7rem;
 
     & > * {
+        color:var(--white);
         margin:0 .5rem;
     }
 `

@@ -6,7 +6,7 @@ export const SearchInput = styled(motion.input)`
 
     background:none;
     border:none;
-    color:#fff;
+    color:var(--white);
     font-size:2rem;
     font-weight: 600;
     height:3rem;
@@ -18,13 +18,13 @@ export const SearchInput = styled(motion.input)`
 
     &:focus{
         
-        color:#E63946;
+        color:var(--red);
 
     }
 
     &:focus + * {
 
-        background:#E63946;
+        background:var(--red);
 
     }
 

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { AiOutlineHome as HomeIcon } from "react-icons/ai";
 import { ImUser as UserIcon } from "react-icons/im";

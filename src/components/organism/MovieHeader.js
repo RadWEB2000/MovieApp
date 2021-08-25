@@ -13,6 +13,10 @@ const MovieHeaderStyle = styled.div`
         overflow:hidden;
         position:relative;
         z-index:1;
+
+        @media only screen and (max-width:800px) and (orientation:landscape){
+            max-height: 150vh;
+        }
 `
 
 export const MovieHeader = () => {

@@ -4,7 +4,7 @@ import { Menu } from '../molecule/Menu';
 import { SearchBox } from '../organism/SearchBox';
 
 const NavigationStyle = styled.nav`
-    background:#070A0E;
+    background:var(--grey);
     display:grid;
     grid-template-columns:3fr 1fr;
     height:4rem;

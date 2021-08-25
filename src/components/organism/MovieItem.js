@@ -13,7 +13,7 @@ const MovieItemStyle = styled.div`
     transition:.2s ease-in-out box-shadow;
 
     &:hover{
-        box-shadow:0 0 26px #f04;
+        box-shadow:0 0 1.5rem var(--redDark);
     }
 
 

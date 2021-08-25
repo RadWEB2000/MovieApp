@@ -1,22 +1,27 @@
 import styled from 'styled-components';
 
 export const MovieTitle = styled.h2`
-    color:pink;
     font-size:4.2rem;
 
     &.main{
-        border-bottom:.25rem solid #e63946;
-        color:#e63946;
+        border-bottom:.25rem solid var(--red);
+        color:var(--red);
         margin:.75rem 0;
         padding-left:4rem;
     }
 
     &.card{
-        color:#e63941;
+        color:var(--redDark);
         font-size:3rem;
         margin:1rem 0;
         padding:none;
         text-align:center;
+    }
+
+    &.result{
+        color:var(--red);
+        text-align:center;
+        padding:.8rem 0;
     }
 
     @media only screen and (max-width:800px){
@@ -26,6 +31,12 @@ export const MovieTitle = styled.h2`
                 padding-left:0;
                 text-align:center;
                 word-wrap:break-word;
+            }
+
+            &.result{
+                font-size:3.2rem;
+                width:85%;
+                margin:auto;
             }
         }
         @media (orientation:landscape){

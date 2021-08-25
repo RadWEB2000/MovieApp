@@ -1,36 +1,19 @@
 import React from 'react';
-import { AiOutlineStar as StarIcon } from "react-icons/ai";
 import styled from 'styled-components';
+import { AiOutlineStar as StarIcon } from "react-icons/ai";
+import {TiGroupOutline as UsersIcon } from "react-icons/ti";
+import { MdDateRange as DateIcon } from "react-icons/md";
 import { MovieDescription } from '../atom/MovieDescription';
 import { MovieFavouriteButton } from '../atom/MovieFavouriteButton';
+import { MoviePopularity } from '../atom/MoviePopularity';
+import { MovieRelease } from '../atom/MovieRelease';
 import { MovieTitle } from '../atom/MovieTitle';
 import { RateWrapper } from '../atom/RateWrapper';
 
-const MovieInformationStyle = styled.div`
-    height:100%;
-    position:absolute;
-
-    &.main{
-        background:hsla(0, 5%, 13%,.8);
-        backdrop-filter:brightness(50%) blur(1rem);
-        position:absolute;
-        bottom:0;
-        height:auto;
-        max-height:70vh;
-        z-index:1;
-    }
-
-    &.card{
-        background:var(--white);
-        top:100%;
-        transition:.2s ease-in-out top;
-        width:100%;
-    }
-    
+const MovieSearchInformationStyle = styled.div`
 `
+export const MovieSearchInformation = ({description,  popular, rate, release, styles, title}) => {
 
-export const MovieInformation = ({ styles, title, description, rate }) => {
-    
     function Raiting() {
         switch (rate) {
             case '1':
@@ -80,20 +63,31 @@ export const MovieInformation = ({ styles, title, description, rate }) => {
     }
 
     return (
-        <MovieInformationStyle className={styles}>
+        <MovieSearchInformationStyle>
             <MovieTitle className={styles}>
                 {title}
             </MovieTitle>
             <RateWrapper className={styles}>
                 {
-                   Raiting()
+                    Raiting()
                 }
-
             </RateWrapper>
+            <MoviePopularity>
+                <UsersIcon  />
+                <p>
+                    {popular}
+                </p>
+            </MoviePopularity>
+            <MovieRelease>
+                <DateIcon />
+                <p>
+                    {release}
+                </p>
+            </MovieRelease>
             <MovieDescription className={styles}>
                 {description}
             </MovieDescription>
-            <MovieFavouriteButton styles={styles}/>
-        </MovieInformationStyle>
+            <MovieFavouriteButton/>
+        </MovieSearchInformationStyle>
     )
 }

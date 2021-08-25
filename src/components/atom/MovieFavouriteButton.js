@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const MovieFavouriteButtonStyle = styled(motion.button)`
     
     align-items:center;
-    background:#e63941;
+    background:var(--redDark);
     border:none;
     border-radius:.5rem;
     cursor:pointer;
@@ -20,15 +20,14 @@ const MovieFavouriteButtonStyle = styled(motion.button)`
     outline:none;
     padding:1rem;
     text-transform:uppercase;
-    transition:.2s linear box-shadow, .2s linear filter;
+    transition:.2s linear box-shadow, .2s linear background;
 
     &:hover{
-        box-shadow:0 0 .5rem #fff;
-        filter:brightness(150%);
+        box-shadow:0 0 .5rem var(--white);
+        background:var(--red);
     }
 
     &.card{
-        ${'' /* color:#e63941; */}
         position:absolute;
         bottom:0;
         border-radius:0;
@@ -37,8 +36,7 @@ const MovieFavouriteButtonStyle = styled(motion.button)`
         font-size:2.4rem;
         left:0;
         margin-left:0;
-        ${'' /* background:#141414; */}
-        color:#141414;
+        color:var(--grey);
         transition:.2s linear transform;
     }
 
@@ -48,7 +46,7 @@ const MovieFavouriteButtonStyle = styled(motion.button)`
 
     &.card::before{
         bottom:0;
-        background:#e63941;
+        background:var(--red);
         height:.5rem;
         transition:.2s .2s linear width;
         width:0%;

@@ -4,13 +4,14 @@ export const MoviePoster = styled.div`
     background-image:url(${props => props.image});
     background-position:center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     height:100%;
     width:100%;
     position:absolute;
     top:0;
 
     &.main{
+        background-size:cover;
         height:100%;
         width:100%;
         z-index:-1;
@@ -18,8 +19,17 @@ export const MoviePoster = styled.div`
 
 
     &.result{
-        width:250px;
+        background-size: contain;
+        width:80%;
         position:relative;
-        height:350px;
+        margin:auto;
+        height:80%;
+    }
+
+     @media only screen and (max-width:800px) and (orientation:portrait) { 
+        &.result{
+            width:80vw;
+            height:50rem;
+        }
     }
 `

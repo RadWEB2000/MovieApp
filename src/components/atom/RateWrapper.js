@@ -17,4 +17,15 @@ export const RateWrapper = styled.div`
         justify-content:center;
         padding-left:0;
     }
+
+    &.result{
+        align-items: center;
+        display:flex;
+        font-size:3rem;
+        justify-content:center;
+        padding-left:0;
+        position:relative;
+        margin:1rem auto;
+        width:100%;
+    }
 `

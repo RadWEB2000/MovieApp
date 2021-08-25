@@ -2,7 +2,7 @@ import {motion} from 'framer-motion';
 import styled from 'styled-components';
 
 export const SearchSpan = styled(motion.span)`
-    background:#fff;
+    background:var(--white);
     bottom:0;
     height:.15rem;
     position:absolute;

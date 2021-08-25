@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const MenuItem = styled(motion(NavLink))`
 
     align-items:center;
-    color:#F1FAEE;
+    color:var(--white);
     cursor:pointer;
     display:flex;
     font-size:3rem;
@@ -13,7 +13,7 @@ export const MenuItem = styled(motion(NavLink))`
     transition:.15s linear color;
 
     &:hover{
-        color:#E63946;
+        color:var(--red);
     }
 
    @media only screen and (max-width:600px){
