@@ -83,9 +83,9 @@ export const App = () => {
 
         descriptionUpdate(e.data.results[0].overview);
         releaseUpdate(e.data.results[0].release_date);
-        rateUpdate(Math.round(e.data.results[0].vote_average / 2));
+        rateUpdate(e.data.results[0].vote_average / 2);
 
-        console.log(popularMovie);
+        console.log(Math.round(rateMovie));
       })
   }
 
@@ -113,7 +113,7 @@ export const App = () => {
                   popular={popularMovie}
                   description={descriptionMovie}
                   release={releaseMovie}
-                  rate={rateMovie}
+                  rate={Math.round(rateMovie)}
                 />
             }
           />

@@ -23,7 +23,7 @@ export const StartView = ({valueSearch,title, popular, description, release, rat
                         <MovieSearch
                             image='https://m.media-amazon.com/images/I/A1wnJQFI82L._AC_SY879_.jpg'
                             title={title}
-                            rate={rate.toString}
+                            rate={rate}
                             release={release}
                             popular={popular}
                             description={description}

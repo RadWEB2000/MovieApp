@@ -22,6 +22,8 @@ export const MovieTitle = styled.h2`
         color:var(--red);
         text-align:center;
         padding:.8rem 0;
+        width:85%;
+        margin:auto;
     }
 
     @media only screen and (max-width:800px){

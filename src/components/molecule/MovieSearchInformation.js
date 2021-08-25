@@ -16,18 +16,18 @@ export const MovieSearchInformation = ({description,  popular, rate, release, st
 
     function Raiting() {
         switch (rate) {
-            case '1':
+            case 1:
                 return (
                     <StarIcon/>
                 );
-            case '2':
+            case 2:
                 return (
                     <>
                         <StarIcon/>
                         <StarIcon/>
                     </>
                 );
-            case '3':
+            case 3:
                 return (
                     <>
                         <StarIcon/>
@@ -35,7 +35,7 @@ export const MovieSearchInformation = ({description,  popular, rate, release, st
                         <StarIcon/>
                     </>
                 );
-            case '4':
+            case 4:
                 return (
                     <>
                         <StarIcon/>
@@ -44,7 +44,7 @@ export const MovieSearchInformation = ({description,  popular, rate, release, st
                         <StarIcon/>
                     </>
                 );
-            case '5':
+            case 5:
                 return (
                     <>
                         <StarIcon/>
