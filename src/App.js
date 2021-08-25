@@ -62,15 +62,14 @@ export const App = () => {
   const [valueSearch, updateSearch] = useState('');
   const [titleMovie, titleUpdate] = useState('');
   const [popularMovie, popularUpdate] = useState('');
-
   const [descriptionMovie, descriptionUpdate] = useState('');
   const [releaseMovie, releaseUpdate] = useState('');
   const [rateMovie, rateUpdate] = useState('');
 
+  const [posterMovie, posterUpdate] = useState('');
+
   const apiKEY = 'c0f0775fea18b0469df241482ffee21b';
-  const apiQUERY = 'star wars the force'
   const apiLANG = 'en-US';
-  const apiURL = `https://api.themoviedb.org/3/search/movie?&api_key=${apiKEY}&language=${apiLANG}&query=${apiQUERY}`;
 
   const updateSearchValue = e => {
     updateSearch(e.target.value);
@@ -80,12 +79,13 @@ export const App = () => {
       .then(e => {
         titleUpdate(e.data.results[0].title);
         popularUpdate(e.data.results[0].popularity);
-
         descriptionUpdate(e.data.results[0].overview);
         releaseUpdate(e.data.results[0].release_date);
         rateUpdate(e.data.results[0].vote_average / 2);
 
-        console.log(Math.round(rateMovie));
+        posterUpdate(`https://image.tmdb.org/t/p/original/${e.data.results[0].poster_path}`)
+
+        console.log(posterMovie);
       })
   }
 
@@ -110,6 +110,7 @@ export const App = () => {
                   valueSearch={valueSearch}
 
                   title={titleMovie}
+                  poster={posterMovie}
                   popular={popularMovie}
                   description={descriptionMovie}
                   release={releaseMovie}

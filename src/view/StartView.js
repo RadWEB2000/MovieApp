@@ -10,7 +10,7 @@ import { MovieItems } from '../components/schema/MovieItems';
 
 
 
-export const StartView = ({valueSearch,title, popular, description, release, rate}) => {
+export const StartView = ({valueSearch,title, popular, description, release, rate, poster}) => {
     return (
         <>
             {
@@ -21,7 +21,7 @@ export const StartView = ({valueSearch,title, popular, description, release, rat
                     <>
                         <MovieSearchValue>„{valueSearch}”</MovieSearchValue>
                         <MovieSearch
-                            image='https://m.media-amazon.com/images/I/A1wnJQFI82L._AC_SY879_.jpg'
+                            image={poster}
                             title={title}
                             rate={rate}
                             release={release}
