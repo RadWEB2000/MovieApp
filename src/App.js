@@ -5,6 +5,7 @@ import { createGlobalStyle } from 'styled-components';
 import { Navigation } from './components/schema/Navigation';
 import { StartView } from './view/StartView';
 import { FavouritesView } from './view/FavouritesView';
+import { AboutView } from './view/AboutView';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -102,6 +103,7 @@ export const App = () => {
         <Switch>
           <Route exact path='/' component={() => <StartView valueSearch={valueSearch} title={titleMovie} poster={posterMovie} popular={popularMovie} description={descriptionMovie} release={releaseMovie} rate={Math.round(rateMovie)} />} />
           <Route path='/favourites' component={ () => <FavouritesView/>}/>
+          <Route path='/about' component={ () => <AboutView/>}/>
         </Switch>
       </Router>
     </>
