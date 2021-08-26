@@ -19,10 +19,12 @@ export const Opinion = ({image, name, comment}) => {
             <OpinionImage opinionUser={image}/>
             <OpinionComment>
                 <strong>{name}</strong>
-                <br/>
-                {
-                    comment
-                }
+                <br />
+                <p>
+                    {
+                        comment
+                    }
+                </p>
             </OpinionComment>
         </OpinionStyle>
     )
