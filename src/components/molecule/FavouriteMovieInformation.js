@@ -11,9 +11,10 @@ const FavouriteMovieInformationStyle = styled.div`
     justify-content:space-evenly;
     display:flex;
     flex-direction:column;
+    width:100%;
     height:100%;
-    transition:.2s linear transform;
-    transform:skewX(90deg);
+    transition:.2s linear top;
+    top:-100%;
     position:absolute;
 
 `

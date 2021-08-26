@@ -11,7 +11,7 @@ const FavouriteMovieStyle = styled.div`
     position:relative;
 
     &:hover > * {
-        transform:skewX(0deg);
+        top:0;
     }
 `
 
