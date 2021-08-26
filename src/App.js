@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import { Navigation } from './components/schema/Navigation';
 import { StartView } from './view/StartView';
+import { FavouritesView } from './view/FavouritesView';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -82,9 +83,7 @@ export const App = () => {
         descriptionUpdate(e.data.results[0].overview);
         releaseUpdate(e.data.results[0].release_date);
         rateUpdate(e.data.results[0].vote_average / 2);
-
         posterUpdate(`https://image.tmdb.org/t/p/original/${e.data.results[0].poster_path}`)
-
         console.log(posterMovie);
       })
   }
@@ -101,23 +100,8 @@ export const App = () => {
           updateSearchValue={updateSearchValue}
       />
         <Switch>
-          <Route
-            exact
-            path='/'
-            component={
-              () =>
-                <StartView
-                  valueSearch={valueSearch}
-
-                  title={titleMovie}
-                  poster={posterMovie}
-                  popular={popularMovie}
-                  description={descriptionMovie}
-                  release={releaseMovie}
-                  rate={Math.round(rateMovie)}
-                />
-            }
-          />
+          <Route exact path='/' component={() => <StartView valueSearch={valueSearch} title={titleMovie} poster={posterMovie} popular={popularMovie} description={descriptionMovie} release={releaseMovie} rate={Math.round(rateMovie)} />} />
+          <Route path='/favourites' component={ () => <FavouritesView/>}/>
         </Switch>
       </Router>
     </>

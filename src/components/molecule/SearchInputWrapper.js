@@ -33,7 +33,7 @@ export const SearchInputWrapper = ({valueSearch, updateSearchValue} ) => {
     return (
         <SearchInputWrapperStyle>
             <SearchInput
-                placeholder='Write here title or actor'
+                placeholder='Write here title movie'
                 value={valueSearch}
                 onChange={updateSearchValue}
             />

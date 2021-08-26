@@ -28,4 +28,8 @@ export const RateWrapper = styled.div`
         margin:1rem auto;
         width:100%;
     }
+
+    &.fav{
+        padding-left:0;
+    }
 `

@@ -26,6 +26,11 @@ export const MoviePoster = styled.div`
         height:80%;
     }
 
+    &.fav{
+        height:30rem;
+        width:100%;
+    }
+
      @media only screen and (max-width:800px) and (orientation:portrait) { 
         &.result{
             width:80vw;

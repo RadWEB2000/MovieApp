@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const MovieTitle = styled.h2`
     font-size:4.2rem;
+    font-weight:500;
 
     &.main{
         border-bottom:.25rem solid var(--red);
         color:var(--red);
         margin:.75rem 0;
+        font-weight:700;
         padding-left:4rem;
     }
 
@@ -24,6 +26,12 @@ export const MovieTitle = styled.h2`
         padding:.8rem 0;
         width:85%;
         margin:auto;
+    }
+
+    &.fav{
+        color:var(--white);
+        font-size:3rem;
+        font-weight:500;
     }
 
     @media only screen and (max-width:800px){
