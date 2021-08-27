@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { favsAPI } from '../../data/favsAPI';
 
 const MovieDisfavouriteButtonStyle = styled.button`
     border:none;
@@ -19,9 +20,27 @@ const MovieDisfavouriteButtonStyle = styled.button`
     }
 `
 
-export const MovieDisfavouriteButton = () => {
+export const MovieDisfavouriteButton = ({title, poster}) => {
+
+    const removeMovie = () => {
+
+        const favElementAPI = {
+            title: title,
+            poster:poster
+        }
+
+
+        favsAPI.splice(favElementAPI ,1);
+        const deletedMovie = favsAPI.splice(favElementAPI, 0);
+        console.log('Lista wszystkich filmów : ' + favsAPI);
+        console.log(favsAPI);
+        console.log('Lista usuniętych filmów : ' + deletedMovie);
+        console.log(deletedMovie);
+    }
+
+
     return (
-        <MovieDisfavouriteButtonStyle>
+        <MovieDisfavouriteButtonStyle onClick={removeMovie}>
             Remove from fav
         </MovieDisfavouriteButtonStyle>
     )

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AiOutlineStar as StarIcon } from "react-icons/ai";
 import { MovieDisfavouriteButton } from '../atom/MovieDisfavouriteButton';
-import { RateWrapper } from '../atom/RateWrapper';
 import { MovieTitle } from '../atom/MovieTitle';
 
 const FavouriteMovieInformationStyle = styled.div`
@@ -19,18 +17,14 @@ const FavouriteMovieInformationStyle = styled.div`
 
 `
 
-export const FavouriteMovieInformation = ({styles}) => {
+export const FavouriteMovieInformation = ({styles, poster, title}) => {
     return (
         <FavouriteMovieInformationStyle>
-            <MovieTitle className={styles}>ANT MAN</MovieTitle>
-            <RateWrapper className={styles}>
-                <StarIcon/>
-                <StarIcon/>
-                <StarIcon/>
-                <StarIcon/>
-                <StarIcon/>
-            </RateWrapper>
-            <MovieDisfavouriteButton/>
+            <MovieTitle className={styles}>{title}</MovieTitle>
+            <MovieDisfavouriteButton
+                title={title}
+                poster={poster}
+            />
         </FavouriteMovieInformationStyle>
     )
 }

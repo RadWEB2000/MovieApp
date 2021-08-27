@@ -12,7 +12,7 @@ import { RateWrapper } from '../atom/RateWrapper';
 
 const MovieSearchInformationStyle = styled.div`
 `
-export const MovieSearchInformation = ({description,  popular, rate, release, styles, title}) => {
+export const MovieSearchInformation = ({description,  popular,poster, rate, release, styles, title}) => {
 
     function Raiting() {
         switch (rate) {
@@ -87,7 +87,10 @@ export const MovieSearchInformation = ({description,  popular, rate, release, st
             <MovieDescription className={styles}>
                 {description}
             </MovieDescription>
-            <MovieFavouriteButton/>
+            <MovieFavouriteButton
+                title={title}
+                poster={poster}
+            />
         </MovieSearchInformationStyle>
     )
 }

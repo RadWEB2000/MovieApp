@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 export const FavouriteMovies = styled.div`
     display:grid;
-    grid-template-columns:repeat(5 ,18fr);
     grid-auto-rows:30rem;
-    width:95vw;
-    padding:.75rem;
-    margin:1rem auto;
     grid-column-gap:.3rem;
     grid-row-gap:.7rem;
+    grid-template-columns:repeat(5 ,18fr);
     height:auto;
-    ${'' /* background:red; */}
+    margin:1rem auto;
+    padding:.75rem;
+    text-align:center;
+    width:95vw;
 
     @media only screen and (max-width:800px) {
         @media (orientation:portrait){

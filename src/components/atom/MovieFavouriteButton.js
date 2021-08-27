@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { favsAPI } from '../../data/favsAPI';
 
 const MovieFavouriteButtonStyle = styled(motion.button)`
     
@@ -77,9 +78,21 @@ const MovieFavouriteButtonStyle = styled(motion.button)`
 
     }
 `
-export const MovieFavouriteButton = ({styles}) => {
+export const MovieFavouriteButton = ({title,poster, styles}) => {
+
+    const addFavourite = e => {
+        const favElementAPI = {
+            title: title,
+            poster:poster
+        }
+
+        e.preventDefault();
+        favsAPI.push(favElementAPI);
+        console.log(favsAPI)
+    }
+
     return (
-        <MovieFavouriteButtonStyle className={styles}>
+        <MovieFavouriteButtonStyle onClick={addFavourite} className={styles}>
             Add to fav
         </MovieFavouriteButtonStyle>
     )

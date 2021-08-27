@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { socials } from '../../data/socials';
+
 
 const SocialsStyle = styled.ul`
     align-items:center;
@@ -17,13 +19,8 @@ const SocialsStyle = styled.ul`
         font-size:4rem;
         height:6rem;
         justify-content: center;
-        transition:.2s linear background, .2s linear color;
         width:6rem;
-
-        &:hover{
-            background:var(--redDark);
-            color:var(--white);
-        }
+        
     }
 
     @media only screen and (max-width:800px){
@@ -42,9 +39,18 @@ export const Socials = () => {
         <SocialsStyle>
             {
                 socials.map(e =>
-                    <a href={e.link} target='_blank' rel='noreferrer'>
+                    <motion.a
+                        href={e.link}
+                        target='_blank'
+                        rel='noreferrer'
+                        whileHover={{
+                            color: 'var(--white)',
+                            y: '-.45rem',
+                            transition: { duration: '.2' },
+                        }}
+                    >
                         {e.icon}
-                    </a>
+                    </motion.a>
 
                 )
             }

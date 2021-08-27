@@ -3,6 +3,7 @@ import { FavouriteSectionTitle } from '../components/atom/FacouriteSectionTitle'
 import { FavouritesTitle } from '../components/atom/FavouritesTitle';
 import { FavouriteMovie } from '../components/organism/FavouriteMovie';
 import { FavouriteMovies } from '../components/atom/FavouriteMovies';
+import { favsAPI } from '../data/favsAPI';
 
 export const FavouritesView = () => {
     return (
@@ -14,42 +15,19 @@ export const FavouritesView = () => {
             <div>
                 <FavouriteSectionTitle>A</FavouriteSectionTitle>
                 <FavouriteMovies>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
+           
+                    {
+                        favsAPI.map(e =>
+                            <FavouriteMovie
+                                poster={e.poster}
+                                title={e.title}
+                            />
+                        )
+                    }
                 </FavouriteMovies>
             </div>
-            <div>
-                <FavouriteSectionTitle>B</FavouriteSectionTitle>
-                <FavouriteMovies>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                </FavouriteMovies>
-            </div>
-            <div>
-                <FavouriteSectionTitle>C</FavouriteSectionTitle>
-                <FavouriteMovies>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                    <FavouriteMovie/>
-                </FavouriteMovies>
-            </div>
+          
+            
         
 
         </>

@@ -28,6 +28,7 @@ export const MovieSearch = ({ description, image,  popular, rate, release, title
                 rate={rate}
                 title={title}
                 description={description}
+                poster={image}
                 release={release}
                 popular={popular}
             />

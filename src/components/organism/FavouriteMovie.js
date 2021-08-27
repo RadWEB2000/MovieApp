@@ -15,14 +15,14 @@ const FavouriteMovieStyle = styled.div`
     }
 `
 
-export const FavouriteMovie = () => {
+export const FavouriteMovie = ({title, poster}) => {
     return (
         <FavouriteMovieStyle>
             <MoviePoster
-                image='https://image.tmdb.org/t/p/original//rS97hUJ1otKTTripGwQ0ujbuIri.jpg'
+                image={poster}
                 className='fav'
             />
-            <FavouriteMovieInformation styles='fav'/>
+            <FavouriteMovieInformation styles='fav' title={title} poster={poster}/>
         </FavouriteMovieStyle>
     )
 }

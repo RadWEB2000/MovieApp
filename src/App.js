@@ -85,7 +85,6 @@ export const App = () => {
         releaseUpdate(e.data.results[0].release_date);
         rateUpdate(e.data.results[0].vote_average / 2);
         posterUpdate(`https://image.tmdb.org/t/p/original/${e.data.results[0].poster_path}`)
-        console.log(posterMovie);
       })
   }
 
