@@ -1,25 +1,31 @@
 import styled from 'styled-components';
 
 export const SubmenuLink = styled.li`
-    display:flex;
     align-items:center;
-    justify-content: center;
-    cursor:pointer;
     background:var(--grey);
     border:.25rem solid var(--red);
     border-radius:5rem;
-    font-size:1.4rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight:900;
-    width:25rem;
-    height:5.5rem;
-    transition:.2s linear border, .2s linear color;
     color:var(--red);
+    cursor:pointer;
+    display:flex;
+    font-size:1.4rem;
+    font-weight:900;
+    height:5.5rem;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    transition:.2s linear border, .2s linear color;
+    width:25rem;
 
     &:hover{
         border:.25rem solid var(--white);
         color:var(--white);
 
+    }
+
+    @media only screen and (max-width:800px){
+        font-size:1.3rem;
+        font-weight:700;
+        margin:.75rem 0;
     }
 `

@@ -1,12 +1,22 @@
 import styled from 'styled-components';
 
 export const OpinionImage = styled.div`
-    width:20rem;
-    height:20rem;
-    border-radius:50%;
-    background-size:cover;
-    background-position:center;
     background-image:url(${props => props.opinionUser});
-    position:relative;
+    background-position:center;
+    background-size:cover;
+    border-radius:50%;
+    height:20rem;
     margin:auto;
+    position:relative;
+    width:20rem;
+
+    @media only screen and (max-width:800px){
+        @media (orientation:portrait){
+            margin:.45rem auto;
+        }
+        @media (orientation:landscape){
+            height:12rem;
+            width:12rem;
+        }
+    }
 `  

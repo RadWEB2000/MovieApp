@@ -3,20 +3,37 @@ import styled from 'styled-components';
 import { socials } from '../../data/socials';
 
 const SocialsStyle = styled.ul`
-    width:70vw;
-    margin:1.5rem auto;
-    display:flex;
     align-items:center;
+    display:flex;
     justify-content:space-evenly;
+    margin:1.5rem auto;
+    width:70vw;
 
     & > a {
-        width:6rem;
-        height:6rem;
-        font-size:5rem;
-        display:flex;
         align-items:center;
-        justify-content: center;
+        border-radius:50%;
         color:var(--red);
+        display:flex;
+        font-size:4rem;
+        height:6rem;
+        justify-content: center;
+        transition:.2s linear background, .2s linear color;
+        width:6rem;
+
+        &:hover{
+            background:var(--redDark);
+            color:var(--white);
+        }
+    }
+
+    @media only screen and (max-width:800px){
+        width:100vw;
+
+        & > a {
+            font-size:3.5rem;
+            height:4.5rem;
+            width:4.5rem;
+        }
     }
 `
 

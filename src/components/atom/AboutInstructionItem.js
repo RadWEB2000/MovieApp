@@ -4,33 +4,21 @@ export const AboutInstructionItem = styled.li`
     display:flex;
     align-items:center;
     cursor:default;
-    font-size:2.5rem;
+    font-size:2rem;
     min-height:15rem;
     font-weight:700;
     text-transform: uppercase;
+    justify-content:center;
+    text-align:center;
 
     &:nth-of-type(odd){
-        grid-column: 2;
-        justify-content:flex-start;
         color:var(--white);
+        background:var(--redDark);
 
     }
     &:nth-of-type(even){
-        grid-column: 1;
-        justify-content:flex-end;
-        color:var(--red);
+        background:var(--white);
+        color:var(--redDark);
     }
 
-    &:nth-of-type(1){
-        grid-row: 1;
-    }
-    &:nth-of-type(2){
-        grid-row: 2;
-    }
-    &:nth-of-type(3){
-        grid-row: 3;
-    }
-    &:nth-of-type(4){
-        grid-row: 4;
-    }
 `

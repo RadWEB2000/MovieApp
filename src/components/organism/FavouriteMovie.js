@@ -4,11 +4,11 @@ import { MoviePoster } from '../atom/MoviePoster';
 import { FavouriteMovieInformation } from '../molecule/FavouriteMovieInformation';
 
 const FavouriteMovieStyle = styled.div`
-    overflow:hidden;
     display:block;
     height:100%;
-    width:100%;
+    overflow:hidden;
     position:relative;
+    width:100%;
 
     &:hover > * {
         top:0;

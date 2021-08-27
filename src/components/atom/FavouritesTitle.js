@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const FavouritesTitle = styled.h2`
-    text-align:center;
-    font-size:3.5rem;
     color:var(--red);
-    text-transform:uppercase;
+    font-size:3.5rem;
     margin:3rem 0;
+    text-align:center;
+    text-transform:uppercase;
 `

@@ -6,9 +6,15 @@ import { AuthorImage } from '../atom/AuthorImage';
 const AuthorWrapperStyle = styled.div`
     display:grid;
     grid-template-columns:1fr 1fr;
-    height:70rem;
-    width:85vw;
+    height:auto;
     margin:2rem auto;
+    width:85vw;
+
+    @media only screen and (max-width:800px){
+        grid-template-columns:1fr;
+        height:auto;
+        width:100vw;
+    }
 `
 
 export const AuthorWrapper = () => {

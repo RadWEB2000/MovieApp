@@ -2,13 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AuthorDescriptionStyle = styled.div`
-    color:var(--white);
-    display:flex;
     align-items:center;
     border:.1rem solid var(--white);
+    color:var(--white);
+    cursor:default;
+    display:flex;
+    font-size:3rem;
     justify-content: center;
     padding:3rem;
-    font-size:3rem;
+
+    @media only screen and (max-width:800px){
+        border:none;
+        font-size:1.8rem;
+        padding:1.5rem;
+    }
 `
 
 export const AuthorDescription = () => {

@@ -1,11 +1,8 @@
 import React from 'react';
-import {HashRouter, Link} from 'react-router-dom'
-import styled from 'styled-components';
+// import {HashRouter, Link} from 'react-router-dom'
 import { AboutInstruction } from '../components/atom/AboutInstruction';
 import { AboutInstructionItem } from '../components/atom/AboutInstructionItem';
 import { AboutSectionTitle } from '../components/atom/AboutSectionTitle';
-import { AuthorDescription } from '../components/atom/AuthorDescription';
-import { AuthorImage } from '../components/atom/AuthorImage';
 import { Socials } from '../components/atom/Socials';
 import { Submenu } from '../components/atom/Submenu';
 import { SubmenuLink } from '../components/atom/SubmenuLink';
@@ -72,9 +69,7 @@ export const AboutView = () => {
                 <Socials/>
             </div>
                 
-            <div>
-                Radosław Adamczyk &copy; 2021
-            </div>
+         
         </>
     )
 }

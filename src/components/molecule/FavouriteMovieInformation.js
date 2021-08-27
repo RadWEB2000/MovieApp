@@ -6,16 +6,16 @@ import { RateWrapper } from '../atom/RateWrapper';
 import { MovieTitle } from '../atom/MovieTitle';
 
 const FavouriteMovieInformationStyle = styled.div`
-    background:var(--redDark);
     align-items: center;
-    justify-content:space-evenly;
+    background:var(--redDark);
     display:flex;
     flex-direction:column;
-    width:100%;
     height:100%;
-    transition:.2s linear top;
-    top:-100%;
+    justify-content:space-evenly;
     position:absolute;
+    top:-100%;
+    transition:.2s linear top;
+    width:100%;
 
 `
 
