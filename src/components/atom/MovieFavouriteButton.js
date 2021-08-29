@@ -88,6 +88,9 @@ export const MovieFavouriteButton = ({title,poster, styles}) => {
 
         e.preventDefault();
         favsAPI.push(favElementAPI);
+        favsAPI.sort((a, b) => {
+            return a - b   
+        })
         console.log(favsAPI)
     }
 

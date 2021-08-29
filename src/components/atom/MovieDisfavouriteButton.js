@@ -20,22 +20,18 @@ const MovieDisfavouriteButtonStyle = styled.button`
     }
 `
 
-export const MovieDisfavouriteButton = ({title, poster}) => {
+export const MovieDisfavouriteButton = ({ title, poster}) => {
 
-    const removeMovie = () => {
+    const removeMovie = e => {
 
         const favElementAPI = {
-            title: title,
-            poster:poster
+            title: e.title,
+            poster:e.poster
         }
 
 
-        favsAPI.splice(favElementAPI ,1);
-        const deletedMovie = favsAPI.splice(favElementAPI, 0);
-        console.log('Lista wszystkich filmów : ' + favsAPI);
+        favsAPI.slice(favElementAPI ,1);
         console.log(favsAPI);
-        console.log('Lista usuniętych filmów : ' + deletedMovie);
-        console.log(deletedMovie);
     }
 
 
